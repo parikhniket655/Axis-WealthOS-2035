@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axis Burgundy Private — WealthOS 2035 Control Hub</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Professional Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Corporate Header -->
+    <header class="axis-header">
+        <div class="axis-brand-container">
+            <!-- Axis Chevron Logo Emblem -->
+            <div class="axis-logo-wrapper">
+                <svg viewBox="0 0 285 250" width="34" height="30">
+                    <!-- Official Axis Left Emblem Path -->
+                    <path d="M 142.27,10.47 C 156.13,34.28 170.11,58.02 183.82,81.92 C 161.66,121.01 139.82,160.29 116.91,198.95 C 108.12,213.79 99.57,228.77 90.88,243.66 C 62.7,243.83 34.52,243.82 6.34,243.78 C 7.2,241.85 8.05,239.91 9.09,238.07 C 53.46,162.19 98,86.41 142.27,10.47 z" fill="#FFFFFF"/>
+                    <!-- Official Axis Right Emblem Path -->
+                    <path d="M 142.28,155.63 C 170.56,155.62 198.84,155.42 227.12,155.89 C 243.96,185.25 261.34,214.29 278.03,243.73 C 249.75,243.87 221.48,243.76 193.2,243.74 C 176.37,214.28 158.79,185.27 142.28,155.63 z" fill="#FFFFFF"/>
+                </svg>
+            </div>
+            <div class="axis-text-wrapper">
+                <span class="axis-main-title">AXIS BANK</span>
+                <span class="axis-sub-title">BURGUNDY PRIVATE</span>
+            </div>
+            <div class="vertical-divider"></div>
+            <div class="system-badge">WEALTHOS 2035</div>
+        </div>
+
+        <nav class="portal-tabs">
+            <button class="portal-tab-btn active" id="btn-client-view" onclick="switchView('client')">
+                <i class="fa-solid fa-chart-line"></i> Client Wealth Twin
+            </button>
+            <button class="portal-tab-btn" id="btn-rm-view" onclick="switchView('rm')">
+                <i class="fa-solid fa-users-gear"></i> SPARSH Advisory Control
+            </button>
+        </nav>
+
+        <div class="user-profile">
+            <div class="user-avatar-initials">VA</div>
+            <div class="user-meta">
+                <span class="user-name" id="user-display-name">Vikram Adani</span>
+                <span class="user-segment" id="user-display-role">Promoter & Business Owner</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content-layout">
+        <!-- ──────────────────────────────────────────────────────── -->
+        <!-- VIEW 1: CLIENT WEALTH TWIN DASHBOARD                     -->
+        <!-- ──────────────────────────────────────────────────────── -->
+        <section id="client-view" class="dashboard-view active">
+            <!-- Corporate Alert banner for AA offline -->
+            <div class="alert-banner" id="aa-alert-banner">
+                <div class="alert-content">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span><strong>Data Notice:</strong> Currently showing Axis Bank holdings only. Link external accounts via Account Aggregator for a unified household view.</span>
+                </div>
+                <button class="alert-action-btn" onclick="toggleAccountAggregator()">Link via AA Rails</button>
+            </div>
+
+            <!-- Key Balance Sheet Stats -->
+            <div class="balance-sheet-grid">
+                <div class="bs-card">
+                    <span class="bs-card-lbl">Consolidated Net Worth</span>
+                    <h2 class="bs-card-val" id="net-worth-val">₹18.20 Cr</h2>
+                    <div class="bs-card-meta">
+                        <span class="trend-indicator upward"><i class="fa-solid fa-caret-up"></i> +14.2%</span>
+                        <span class="text-muted">vs previous fiscal</span>
+                    </div>
+                </div>
+                
+                <div class="bs-card">
+                    <span class="bs-card-lbl">Invested Assets</span>
+                    <h2 class="bs-card-val" id="assets-val">₹14.50 Cr</h2>
+                    <div class="bs-card-meta">
+                        <span class="source-tag" id="assets-status">Axis Assets</span>
+                    </div>
+                </div>
+
+                <div class="bs-card">
+                    <span class="bs-card-lbl">Total Liabilities</span>
+                    <h2 class="bs-card-val" id="liabilities-val">₹3.70 Cr</h2>
+                    <div class="bs-card-meta">
+                        <span class="text-danger"><i class="fa-solid fa-circle-exclamation"></i> Net Debt Leveraged</span>
+                    </div>
+                </div>
+
+                <div class="bs-card interactive-sync-card" onclick="toggleAccountAggregator()">
+                    <span class="bs-card-lbl">Account Aggregator Consent</span>
+                    <h2 class="bs-card-val text-burgundy" id="aa-status-text">OFFLINE</h2>
+                    <div class="bs-card-meta flex-between">
+                        <span class="status-indicator-dot" id="aa-status-dot"></span>
+                        <span class="action-text" id="aa-action-hint">Click to authorize sync</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Columns Split -->
+            <div class="portal-grid-split">
+                <!-- Left Panel: Family Legacy & Timeline -->
+                <div class="portal-left-panel">
+                    <!-- The Family Wealth Narrative & Timeline (The Story) -->
+                    <div class="corporate-card">
+                        <div class="family-narrative-container">
+                            <div class="narrative-header">
+                                <h4>The Adani Family Legacy</h4>
+                                <span class="status-pill">Liquid Transition Phase</span>
+                            </div>
+                            <p class="narrative-body">
+                                Ahmedabad-based logistics promoter family preparing for a <strong>₹180 Cr equity liquidity event</strong> and transitioning capital control to next-gen inheritors.
+                            </p>
+                            
+                            <div class="card-title-bar" style="margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: none;">
+                                <h3 style="font-size: 0.85rem; color: var(--gold);">Intergenerational Milestones</h3>
+                            </div>
+                            <div class="timeline-container">
+                                <div class="timeline-item completed">
+                                    <div class="timeline-dot"><i class="fa-solid fa-check"></i></div>
+                                    <div class="timeline-content">
+                                        <h5>Account Aggregator Synced</h5>
+                                        <p>Linked external equity PMS and real estate registers to build the unified Wealth Twin.</p>
+                                        <span>Step 1 · Completed</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item active" id="eco-trustee-timeline">
+                                    <div class="timeline-dot"><i class="fa-solid fa-ellipsis"></i></div>
+                                    <div class="timeline-content">
+                                        <h5>Family Succession Trust Establishment</h5>
+                                        <p>Establishing the Kabir Legacy Trust using Axis Trustee Services to transfer assets tax-neutrally.</p>
+                                        <span>Step 2 · Action Required</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot">3</div>
+                                    <div class="timeline-content">
+                                        <h5>Promoter Liquidity Event Cash Inflow</h5>
+                                        <p>Receiving ₹180 Cr and routing it automatically via One Axis pre-approved yield products.</p>
+                                        <span>Step 3 · Target: Next Month</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot">4</div>
+                                    <div class="timeline-content">
+                                        <h5>Kabir's Next-Gen Impact Allocation</h5>
+                                        <p>Deploying ₹25 Cr into pre-screened sustainable ESG funds and startup VC pools.</p>
+                                        <span>Step 4 · Target: Q3 FY27</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Asset Allocation Twin -->
+                    <div class="corporate-card">
+                        <div class="card-title-bar">
+                            <h3>Asset Allocation Twin</h3>
+                            <span class="badge" id="asset-count-badge">3 Asset Classes</span>
+                        </div>
+                        <div class="chart-flex-container">
+                            <div class="canvas-wrapper">
+                                <canvas id="allocationChart" width="280" height="280"></canvas>
+                                <div class="canvas-inner-label">
+                                    <span class="inner-title" id="center-label-title">Axis Holdings</span>
+                                    <span class="inner-value" id="center-label-val">₹18.20 Cr</span>
+                                </div>
+                            </div>
+                            <div class="legend-table" id="allocationLegend">
+                                <!-- Legend elements loaded dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- One Axis Group Legal Entities status -->
+                    <div class="corporate-card">
+                        <div class="card-title-bar">
+                            <h3>'One Axis' Group Capabilities Integration</h3>
+                        </div>
+                        <p class="card-subtext">Automated client routing status across group entities to eliminate service silos.</p>
+                        <div class="ecosystem-routing-list">
+                            <div class="routing-item active">
+                                <div class="routing-icon"><i class="fa-solid fa-building-columns"></i></div>
+                                <div class="routing-meta">
+                                    <strong>Axis Bank Ltd</strong>
+                                    <span>Deposits, Cards, Core Wealth Operations</span>
+                                </div>
+                                <div class="routing-status">Linked</div>
+                            </div>
+                            <div class="routing-item active">
+                                <div class="routing-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <div class="routing-meta">
+                                    <strong>Axis Securities Ltd</strong>
+                                    <span>Brokerage, Direct Equity, Demat Gateways</span>
+                                </div>
+                                <div class="routing-status">Linked</div>
+                            </div>
+                            <div class="routing-item active">
+                                <div class="routing-icon"><i class="fa-solid fa-coins"></i></div>
+                                <div class="routing-meta">
+                                    <strong>Axis Asset Management (AMC)</strong>
+                                    <span>Mutual Funds, PMS, Alternative AIF Portfolios</span>
+                                </div>
+                                <div class="routing-status">Linked</div>
+                            </div>
+                            <div class="routing-item active">
+                                <div class="routing-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                                <div class="routing-meta">
+                                    <strong>Axis Finance Ltd</strong>
+                                    <span>Leveraged Wealth Lending, Business Capital Loans</span>
+                                </div>
+                                <div class="routing-status">Linked</div>
+                            </div>
+                            <div class="routing-item" id="eco-trustee">
+                                <div class="routing-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div class="routing-meta">
+                                    <strong>Axis Trustee Services</strong>
+                                    <span>Succession, Estate Execution, Family Trust setup</span>
+                                </div>
+                                <div class="routing-status">Inactive</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Asset Allocation & Action Queue -->
+                <div class="portal-right-panel">
+                    <!-- Burgundy Private Metal Card Widget -->
+                    <div class="corporate-card">
+                        <div class="card-title-bar">
+                            <h3>Membership Credentials</h3>
+                        </div>
+                        <div class="metal-card-container">
+                            <div class="private-metal-card">
+                                <div class="metal-card-glow"></div>
+                                <div class="card-chip"></div>
+                                <div class="card-header-logo">
+                                    <svg viewBox="0 0 285 250" width="20" height="17">
+                                        <path d="M 142.27,10.47 C 156.13,34.28 170.11,58.02 183.82,81.92 C 161.66,121.01 139.82,160.29 116.91,198.95 C 108.12,213.79 99.57,228.77 90.88,243.66 C 62.7,243.83 34.52,243.82 6.34,243.78 C 7.2,241.85 8.05,239.91 9.09,238.07 C 53.46,162.19 98,86.41 142.27,10.47 z" fill="#FFFFFF"/>
+                                        <path d="M 142.28,155.63 C 170.56,155.62 198.84,155.42 227.12,155.89 C 243.96,185.25 261.34,214.29 278.03,243.73 C 249.75,243.87 221.48,243.76 193.2,243.74 C 176.37,214.28 158.79,185.27 142.28,155.63 z" fill="#FFFFFF"/>
+                                    </svg>
+                                    <span class="card-logo-text">BURGUNDY</span>
+                                </div>
+                                <div class="card-number">•••• •••• •••• 2035</div>
+                                <div class="card-footer">
+                                    <div class="card-holder">
+                                        <span class="lbl">Cardmember</span>
+                                        <span class="val">VIKRAM ADANI</span>
+                                    </div>
+                                    <div class="card-segment">
+                                        <span class="lbl">Segment</span>
+                                        <span class="val">ROYALE CLIENT</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="corporate-card border-burgundy">
+                        <div class="card-title-bar">
+                            <h3 class="text-burgundy"><i class="fa-solid fa-microchip"></i> AI Advisory Factory Action Queue</h3>
+                            <span class="action-count-badge" id="action-count-badge">4 Actions</span>
+                        </div>
+                        <p class="card-subtext">Continuous compliance-screened recommendations generated by the core AI wealth engine.</p>
+                        
+                        <div class="corporate-action-list" id="advice-action-list">
+                            <!-- Generated Dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Family Banking Structuring -->
+                    <div class="corporate-card">
+                        <div class="card-title-bar">
+                            <h3>Family Banking 2.0 Structures</h3>
+                        </div>
+                        <p class="card-subtext">Consolidating household wealth mandates to secure intergenerational estate continuity.</p>
+                        <div class="family-structure-list">
+                            <div class="family-member-row">
+                                <div class="member-badge primary">VA</div>
+                                <div class="member-details">
+                                    <strong>Vikram Adani</strong>
+                                    <span>Primary Member (Promoter Portfolio)</span>
+                                </div>
+                                <span class="badge-status success">Primary</span>
+                            </div>
+                            <div class="family-member-row">
+                                <div class="member-badge">AA</div>
+                                <div class="member-details">
+                                    <strong>Anjali Adani</strong>
+                                    <span>Spouse (Co-Applicant & Joint Liabilities)</span>
+                                </div>
+                                <span class="badge-status success">Linked</span>
+                            </div>
+                            <div class="family-member-row">
+                                <div class="member-badge">KA</div>
+                                <div class="member-details">
+                                    <strong>Kabir Adani</strong>
+                                    <span>Son (Inheritor & Succession Beneficiary)</span>
+                                </div>
+                                <span class="badge-status warning" id="kabir-link-status">Awaiting Trust setup</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ──────────────────────────────────────────────────────── -->
+        <!-- VIEW 2: RELATIONSHIP MANAGER / POD CONTROL               -->
+        <!-- ──────────────────────────────────────────────────────── -->
+        <section id="rm-view" class="dashboard-view">
+            <div class="rm-portal-layout">
+                <!-- Left Sidebar: Client List & Pod Members -->
+                <div class="rm-left-sidebar">
+                    <div class="corporate-card dense-card">
+                        <div class="card-title-bar">
+                            <h3>Pod Client Roster</h3>
+                        </div>
+                        <div class="roster-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Filter roster by client or segment..." id="client-search-input">
+                        </div>
+                        <div class="roster-list">
+                            <div class="roster-item active" onclick="selectClient('Vikram Adani')">
+                                <div class="roster-initials burgundy-bg">VA</div>
+                                <div class="roster-details">
+                                    <strong>Vikram Adani</strong>
+                                    <span>₹42.50 Cr · Logistics Promoter</span>
+                                </div>
+                                <span class="roster-tag premium">UHNI</span>
+                            </div>
+                            <div class="roster-item" onclick="selectClient('Rajesh Sharma')">
+                                <div class="roster-initials">RS</div>
+                                <div class="roster-details">
+                                    <strong>Rajesh Sharma</strong>
+                                    <span>₹8.40 Cr · Agri-Exporter</span>
+                                </div>
+                                <span class="roster-tag">Affluent</span>
+                            </div>
+                            <div class="roster-item" onclick="selectClient('Dr. Priya Patel')">
+                                <div class="roster-initials">PP</div>
+                                <div class="roster-details">
+                                    <strong>Dr. Priya Patel</strong>
+                                    <span>₹12.10 Cr · Cardiologist</span>
+                                </div>
+                                <span class="roster-tag">Affluent</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pod Members / Roles -->
+                    <div class="corporate-card dense-card">
+                        <div class="card-title-bar">
+                            <h3>Advisory Pod Configuration</h3>
+                        </div>
+                        <div class="pod-configuration-list">
+                            <div class="pod-member-row">
+                                <div class="role-avatar rm-color"><i class="fa-solid fa-user-tie"></i></div>
+                                <div class="role-details">
+                                    <strong>Arnika Dixit</strong>
+                                    <span>Relationship & Family Lead</span>
+                                </div>
+                            </div>
+                            <div class="pod-member-row">
+                                <div class="role-avatar port-color"><i class="fa-solid fa-compass-drafting"></i></div>
+                                <div class="role-details">
+                                    <strong>Devang Mehta</strong>
+                                    <span>Portfolio & Quants Architect</span>
+                                </div>
+                            </div>
+                            <div class="pod-member-row">
+                                <div class="role-avatar credit-color"><i class="fa-solid fa-credit-card"></i></div>
+                                <div class="role-details">
+                                    <strong>Siddharth Rao</strong>
+                                    <span>Credit & Leverage Specialist</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Workspace: Briefing, Suitability & Collab Workspace -->
+                <div class="rm-main-workspace">
+                    <!-- AI Briefing Dossier -->
+                    <div class="corporate-card">
+                        <div class="card-title-bar">
+                            <h3>AI-Generated Client Briefing Dossier: <span id="briefing-client-name" class="text-burgundy">Vikram Adani</span></h3>
+                            <button class="btn-refresh" onclick="generateDossier()"><i class="fa-solid fa-arrows-rotate"></i> Sync Dossier</button>
+                        </div>
+                        <div class="dossier-inner-content" id="dossier-content">
+                            <!-- Generated Dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Pod Collaborative Log -->
+                    <div class="corporate-card">
+                        <div class="card-title-bar">
+                            <h3>Pod Collaboration & Audit Trail Log</h3>
+                            <div class="pod-tab-links">
+                                <button class="pod-tab-link active" onclick="switchPodTab('rm')">Lead RM</button>
+                                <button class="pod-tab-link" onclick="switchPodTab('portfolio')">Portfolio</button>
+                                <button class="pod-tab-link" onclick="switchPodTab('credit')">Credit</button>
+                            </div>
+                        </div>
+                        <div class="pod-comments-log" id="pod-workspace-container">
+                            <!-- Generated Dynamically -->
+                        </div>
+                        <div class="pod-comment-editor">
+                            <input type="text" placeholder="Enter notes to append to compliance log..." id="pod-comment-input">
+                            <button class="btn btn-burgundy-outline" onclick="addPodComment()"><i class="fa-solid fa-paper-plane"></i> Log Entry</button>
+                        </div>
+                    </div>
+
+                    <!-- SEBI Suitability Checker -->
+                    <div class="corporate-card suitability-container">
+                        <div class="card-title-bar">
+                            <h3>SPARSH Suitability & Compliance Auditing Monitor</h3>
+                            <span class="compliance-badge"><i class="fa-solid fa-gavel"></i> SEBI/RBI Guardrails</span>
+                        </div>
+                        <p class="card-subtext">Pre-screen and validate investment advice parameters to ensure strict risk suitability matching prior to execution.</p>
+                        
+                        <div class="suitability-audit-split">
+                            <div class="audit-inputs">
+                                <label for="proposed-product">Proposed Investment Product:</label>
+                                <select id="proposed-product" onchange="resetSuitabilityState()">
+                                    <option value="">-- Select Asset Class --</option>
+                                    <option value="high-beta-aif">Axis High Beta Venture AIF (High Volatility Alternative)</option>
+                                    <option value="esg-mutual-fund">Axis ESG Integration Equity Fund (Diversified Equity)</option>
+                                    <option value="short-term-debt">Axis Ultra Short Term Bond Fund (Liquid Debt)</option>
+                                    <option value="crypto-index">Offshore Cryptocurrency Index Tracker (Unregulated Asset)</option>
+                                </select>
+
+                                <label for="proposed-weight">Allocation Weight:</label>
+                                <div class="weight-flex-input">
+                                    <input type="range" id="proposed-weight" min="1" max="50" value="10" oninput="document.getElementById('weight-display').innerText = this.value + '%'; resetSuitabilityState();">
+                                    <span id="weight-display">10%</span>
+                                </div>
+                                
+                                <button class="btn btn-burgundy btn-lg" onclick="runSuitabilityCheck()"><i class="fa-solid fa-shield-check"></i> Execute Suitability Check</button>
+                            </div>
+
+                            <div class="audit-results" id="suitability-result-box">
+                                <div class="result-placeholder">
+                                    <i class="fa-solid fa-shield-heart"></i>
+                                    <p>Select a product and verify compliance to display audited results.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Notifications -->
+    <div class="modal-overlay" id="notification-modal">
+        <div class="modal-box">
+            <div class="modal-status-icon text-burgundy" id="modal-icon-element"><i class="fa-solid fa-shield-check"></i></div>
+            <h3 id="modal-title-text">Execution Logged</h3>
+            <p id="modal-body-text">Transaction cleared by the advisory pod, formatted to audit trail, and sent to client signature queue.</p>
+            <button class="btn btn-burgundy" onclick="closeModal()">Return to Dashboard</button>
+        </div>
+    </div>
+
+    <!-- Script Entry -->
+    <script src="app.js"></script>
+</body>
+</html>
