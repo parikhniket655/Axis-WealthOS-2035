@@ -15,7 +15,7 @@ This strategy document outlines **Axis WealthOS 2035**: a bold, enterprise-level
 
 ## 2. Current-State Baseline & Strategic Assets
 To build a credible transformation case, the proposal anchors on Axis Bank's actual financial and operational baseline as of Q1 FY27. Axis is uniquely positioned to execute this transformation due to several proprietary assets:
-* **Scaled Wealth Franchise:** As of Q1 FY27, Axis Bank's total Burgundy wealth AUM reached **₹7.54 trillion**, registering a strong 20% YoY growth. The ultra-high-net-worth (UHNWI) segment, Burgundy Private, expanded to **₹2.68 trillion AUM**, serving over **17,400 families** and **40,100 clients**. This provides a massive, high-value deposit and fee-generating engine.
+* **Scaled Wealth Franchise:** As of March 31, 2026 (Q4 FY26), Axis Bank's total Burgundy wealth AUM stood at **₹6.78 trillion**. The ultra-high-net-worth (UHNWI) segment, Burgundy Private, stood at **₹2.40 trillion AUM**, serving over **16,453 families**. This provides a massive, high-value deposit and fee-generating engine.
 * **The Citibank Integration:** The acquisition of Citibank's consumer business added approximately **₹1.11 trillion in wealth AUM**, significantly accelerating Axis's premiumization strategy and providing a highly disciplined affluent client base and premium talent pool.
 * **Industrialized Virtual Servicing:** Through the Axis Virtual Centre, the bank deploys **1,700 virtual RMs**, connecting with **4.2 million customers monthly**. This proves Axis already possess the digital service infrastructure needed to scale automated advisory preparation.
 * **The "One Axis" Ecosystem:** Unlike standalone wealth boutiques, Axis Bank can draw from its comprehensive family of legal entities including Axis Securities (broking), Axis AMC (mutual funds/PMS/AIF), Axis Capital (investment banking), Axis Finance (lending), and Axis Trustee Services (estate planning). Currently, these entities operate in parallel; WealthOS will integrate them around the client.
@@ -81,9 +81,9 @@ Axis Bank cannot profitably place dedicated Burgundy Private wealth offices in e
 
 | Performance Indicator | Q1 FY27 Baseline | 2030 Target | 2035 Ambition |
 | :--- | :--- | :--- | :--- |
-| **Total Burgundy AUM** | ₹7.54 Lakh Cr | ₹11.50 Lakh Cr | ₹16.50 Lakh Cr |
-| **Burgundy Private AUM** | ₹2.68 Lakh Cr | ₹4.50 Lakh Cr | ₹7.00 Lakh Cr |
-| **Burgundy Private Families** | 17,400+ | 30,000+ | 55,000+ |
+| **Total Burgundy AUM** | ₹6.78 Lakh Cr | ₹11.50 Lakh Cr | ₹16.50 Lakh Cr |
+| **Burgundy Private AUM** | ₹2.40 Lakh Cr | ₹4.50 Lakh Cr | ₹7.00 Lakh Cr |
+| **Burgundy Private Families** | 16,453 | 30,000+ | 55,000+ |
 | **RM Productivity Multiplier** | 1.0x (Baseline) | 1.3x (+30% capacity) | 1.6x (+60% capacity) |
 | **Affluent Household Wallet Share** | Estimated 18% | 25% (+700 bps) | 35% (+1700 bps) |
 | **Cost-to-Serve per Client** | High (Human-Led) | -35% (AI-Assisted) | -85% (AI-Automated prep) |
@@ -117,7 +117,7 @@ To mitigate execution risks and distribute capital investment, the transformatio
 * **Visual Layout:** Three vertical columns establishing contrast and logic:
   * **Column 1: The Structural Challenge (Why Now?):** Highlight that India's affluent class is expanding outside metros (Goldman Sachs: 100M by 2027), making traditional high-touch RM-only models too expensive to scale. Relentless RM headcount expansion is not viable.
   * **Column 2: The Core Bet (The Transformation):** Introduce WealthOS. Outline the shift from managing accounts and pushing products to real-time household wealth orchestration using 'Wealth Twins' and the AI Advice Factory.
-  * **Column 3: Why Axis Wins (Strategic Anchors):** Quantify Axis's scale: ₹7.54 Lakh Cr Burgundy AUM, ₹2.68 Lakh Cr Burgundy Private AUM, 17,400+ Burgundy Private families, and Citibank integration synergies. Anchor this with a large graphic showing Axis's leadership position.
+  * **Column 3: Why Axis Wins (Strategic Anchors):** Quantify Axis's scale: ₹6.78 Lakh Cr Burgundy AUM, ₹2.40 Lakh Cr Burgundy Private AUM, 16,453 Burgundy Private families, and Citibank integration synergies. Anchor this with a large graphic showing Axis's leadership position.
 * **Speaker Script Highlight:** *"Burgundy is already a market leader. But to capture the next wave of wealth in India's Tier-2 and Tier-3 hubs, we must build a model that multiplies advisor capability rather than advisor headcount. Axis WealthOS is that future."*
 
 ### Slide 2: How It Works & Strategic Impact

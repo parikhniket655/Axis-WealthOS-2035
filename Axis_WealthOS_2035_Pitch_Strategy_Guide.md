@@ -32,7 +32,7 @@ The financial viability of the WealthOS model relies on shifting the cost curve 
 
 #### Capital Investment & ROI Projections:
 * **Development Phase Investment:** The total capital outlay to construct the Wealth Twin API gateway, integrate the Account Aggregator pipeline, and train the specialized AI Advice models is projected at **₹120 Crores** over a 5-year phased rollout. Opex is estimated at **₹15 Crores** annually.
-* **Financial NPV & IRR:** Based on a conservative 20% annual increase in fee-income from incremental external assets under management (AUM) and cost savings from RM productivity gains, the project has an estimated **Net Present Value (NPV) of ₹420 Crores** (at a 12% discount rate) and an **Internal Rate of Return (IRR) of 32.4%**.
+* **Financial NPV & IRR:** Based on our industry-grounded base case (150 clients/pod, 75 bps fee, 12% WACC), the project yields a Net Present Value (NPV) of **₹132.7 Crores** and an Internal Rate of Return (IRR) of **21.4%** (payback: 3.6 years), clearing the bank's 20% strategic hurdle. Under our upside case (220 clients/pod), the project yields an **NPV of ₹224.5 Crores** and an **IRR of 26.7%** (payback: 3.3 years).
 * **One Axis Group Cross-Sell Lift:** WealthOS will automate client routing to Axis Securities, AMC, and Trustee. We project that the cross-sell attachment ratio (the average number of group products held by a Burgundy Private client) will rise from **1.8 today to 4.2 by 2035**, generating high-margin fee income across all subsidiaries.
 
 ### B. Operational & Structural Feasibility
@@ -42,7 +42,7 @@ The operational feasibility is ensured by restructuring the bank's front-office 
   2. *Portfolio Architect* (conducts asset modeling and risk rebalancing).
   3. *Credit Specialist* (manages asset leverage, mortgages, and business-owner capital loans).
   
-  A single Pod can comfortably support **600 high-value clients**, compared to only 150 clients previously supported by three separate, uncoordinated RMs.
+  A single Pod can support a realistic base of **150 clients** (representing a 67% capacity lift from the manual bottleneck of 90), with an upside stretch target of **220 clients** as AI-assist tools mature. This applies the bottleneck rule (capacity = 2 * lead's capacity), preventing the sum-of-caps error of 600/pod.
 * **Performance Scorecard Transformation:** We will completely eliminate product-specific sales commission targets, which often lead to mis-selling. The new scorecard consists of: **60% Consolidated Wallet Share & Retention** (rewarding overall assets and liabilities held at Axis), and **40% SPARSH Compliance & Suitability** (rewarding low risk-profile drift and high client feedback scores).
 
 ### C. Technology & Data Feasibility

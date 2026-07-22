@@ -250,9 +250,9 @@ def create_strategy_pdf(filename):
         body_style
     ))
     story.append(Paragraph(
-        "• <b>Scaled Wealth Franchise:</b> As of Q1 FY27, Axis Bank's total Burgundy wealth AUM reached <b>₹7.54 trillion</b>, registering a strong "
-        "20% YoY growth. The ultra-high-net-worth (UHNWI) segment, Burgundy Private, expanded to <b>₹2.68 trillion AUM</b>, serving over "
-        "<b>17,400 families</b> and <b>40,100 clients</b>. This provides a massive, high-value deposit and fee-generating engine.",
+        "• <b>Scaled Wealth Franchise:</b> As of March 31, 2026 (Q4 FY26), Axis Bank's total Burgundy wealth AUM stood at <b>₹6.78 trillion</b>. "
+        "The ultra-high-net-worth (UHNWI) segment, Burgundy Private, stood at <b>₹2.40 trillion AUM</b>, serving over "
+        "<b>16,453 families</b>. This provides a massive, high-value deposit and fee-generating engine.",
         bullet_style
     ))
     story.append(Paragraph(
@@ -436,17 +436,17 @@ def create_strategy_pdf(filename):
          Paragraph("<b>2035 Ambition</b>", table_header_style)],
         
         [Paragraph("Total Burgundy AUM", table_cell_bold_style), 
-         Paragraph("₹7.54 Lakh Cr", table_cell_style), 
+         Paragraph("₹6.78 Lakh Cr", table_cell_style), 
          Paragraph("₹11.50 Lakh Cr", table_cell_style), 
          Paragraph("₹16.50 Lakh Cr", table_cell_style)],
          
         [Paragraph("Burgundy Private AUM", table_cell_bold_style), 
-         Paragraph("₹2.68 Lakh Cr", table_cell_style), 
+         Paragraph("₹2.40 Lakh Cr", table_cell_style), 
          Paragraph("₹4.50 Lakh Cr", table_cell_style), 
          Paragraph("₹7.00 Lakh Cr", table_cell_style)],
          
         [Paragraph("Burgundy Private Families", table_cell_bold_style), 
-         Paragraph("17,400+", table_cell_style), 
+         Paragraph("16,453", table_cell_style), 
          Paragraph("30,000+", table_cell_style), 
          Paragraph("55,000+", table_cell_style)],
          
@@ -559,8 +559,8 @@ def create_strategy_pdf(filename):
         "making traditional high-touch RM-only models too expensive to scale. Relentless RM headcount expansion is not viable.<br/>"
         "• <b>Column 2: The Core Bet (The Transformation):</b> Introduce WealthOS. Outline the shift from managing accounts and pushing products to "
         "real-time household wealth orchestration using 'Wealth Twins' and the AI Advice Factory.<br/>"
-        "• <b>Column 3: Why Axis Wins (Strategic Anchors):</b> Quantify Axis's scale: ₹7.54 Lakh Cr Burgundy AUM, ₹2.68 Lakh Cr Burgundy Private AUM, "
-        "17,400+ Burgundy Private families, and Citibank integration synergies. Anchor this with a large graphic showing Axis's leadership position.<br/>"
+        "• <b>Column 3: Why Axis Wins (Strategic Anchors):</b> Quantify Axis's scale: ₹6.78 Lakh Cr Burgundy AUM, ₹2.40 Lakh Cr Burgundy Private AUM, "
+        "16,453 Burgundy Private families, and Citibank integration synergies. Anchor this with a large graphic showing Axis's leadership position.<br/>"
         "<b>Speaker Script Highlight:</b> <i>'Burgundy is already a market leader. But to capture the next wave of wealth in India's Tier-2 and Tier-3 hubs, "
         "we must build a model that multiplies advisor capability rather than advisor headcount. Axis WealthOS is that future.'</i>",
         body_style

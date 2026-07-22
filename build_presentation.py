@@ -97,8 +97,8 @@ def build_axis_presentation():
 
     # Three KPIs on right panel
     kpis = [
-        {'val': '₹7.54T', 'lbl': 'Burgundy AUM\nBaseline'},
-        {'val': '17,400+', 'lbl': 'Burgundy Private\nFamilies'},
+        {'val': '₹6.78T', 'lbl': 'Burgundy AUM\nBaseline'},
+        {'val': '16,450+', 'lbl': 'Burgundy Private\nFamilies'},
         {'val': '1,700', 'lbl': 'Virtual RMs\nDeployed'},
     ]
     for i, k in enumerate(kpis):
@@ -202,8 +202,8 @@ def build_axis_presentation():
     c3y = colY + 1.15
     # Big stat callout
     draw_rect(s1, c3x, c3y, colW - 0.3, 1.1, MINT)
-    add_text_block(s1, c3x, c3y + 0.05, colW - 0.3, 0.55, '₹7.54T', 36, WHITE, bold=True, fontFace='Cambria', align=PP_ALIGN.CENTER)
-    add_text_block(s1, c3x, c3y + 0.65, colW - 0.3, 0.35, 'Burgundy AUM  ·  20% YoY Growth  ·  Q1 FY27', 9, WHITE, fontFace='Calibri', align=PP_ALIGN.CENTER)
+    add_text_block(s1, c3x, c3y + 0.05, colW - 0.3, 0.55, '₹6.78T', 36, WHITE, bold=True, fontFace='Cambria', align=PP_ALIGN.CENTER)
+    add_text_block(s1, c3x, c3y + 0.65, colW - 0.3, 0.35, 'Burgundy AUM  ·  20% YoY Growth  ·  FY26', 9, WHITE, fontFace='Calibri', align=PP_ALIGN.CENTER)
 
     anchors = [
         {'head': 'Citibank Integration', 'body': "₹1.11T wealth AUM added. Premium talent pool + disciplined UHNI base instantly elevates Axis's premiumization strategy."},
@@ -321,7 +321,7 @@ def build_axis_presentation():
     # Table headers
     tY = RY + 0.32
     draw_rect(s2, RX, tY, RW, 0.3, MAROON)
-    hCols = ['INDICATOR', 'FY27 BASE', '2030', '2035']
+    hCols = ['INDICATOR', 'FY26 BASE', '2030', '2035']
     hWids = [2.0, 1.15, 1.15, 1.15]
     hOff = RX + 0.08
     for i, h in enumerate(hCols):
@@ -329,9 +329,9 @@ def build_axis_presentation():
         hOff += hWids[i] + 0.05
 
     rows = [
-        ['Burgundy AUM', '₹7.54T', '₹11.50T', '₹16.50T'],
-        ['Burgundy Private AUM', '₹2.68T', '₹4.50T', '₹7.00T'],
-        ['UHNWI Families Served', '17,400+', '30,000+', '55,000+'],
+        ['Burgundy AUM', '₹6.78T', '₹11.50T', '₹16.50T'],
+        ['Burgundy Private AUM', '₹2.40T', '₹4.50T', '₹7.00T'],
+        ['UHNWI Families Served', '16,450+', '30,000+', '55,000+'],
         ['RM Productivity', '1.0x', '1.3x', '1.6x'],
         ['Wallet Share (Affluent)', '~18%', '25%', '35%'],
         ['Cost-to-Serve', 'Baseline', '–35%', '–85%'],

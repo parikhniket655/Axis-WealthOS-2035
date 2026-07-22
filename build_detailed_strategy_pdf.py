@@ -320,9 +320,10 @@ def create_strategy_guide_pdf(filename):
         bullet_style
     ))
     story.append(Paragraph(
-        "• <b>Financial NPV & IRR:</b> Based on a conservative 20% annual increase in fee-income from incremental external assets "
-        "under management (AUM) and cost savings from RM productivity gains, the project has an estimated "
-        "<b>Net Present Value (NPV) of ₹420 Crores</b> (at a 12% discount rate) and an **Internal Rate of Return (IRR) of 32.4%**.",
+        "• <b>Financial NPV & IRR:</b> Based on our industry-grounded base case (150 clients/pod, 75 bps fee, 12% WACC), the project yields "
+        "a <b>Net Present Value (NPV) of ₹132.7 Crores</b> and an <b>Internal Rate of Return (IRR) of 21.4%</b> (payback: 3.6 years), "
+        "clearing the bank's 20% strategic hurdle. Under our upside case (220 clients/pod), the project yields an "
+        "<b>NPV of ₹224.5 Crores</b> and an <b>IRR of 26.7%</b> (payback: 3.3 years).",
         bullet_style
     ))
     story.append(Paragraph(
@@ -343,8 +344,9 @@ def create_strategy_guide_pdf(filename):
         "• <b>The 3-Person Advisory Pod Model:</b> We transition branches away from the single-RM structure. "
         "A Pod consists of: (1) <i>Lead Relationship Partner</i> (owns client trust, goal discovery, and family dynamics); "
         "(2) <i>Portfolio Architect</i> (conducts asset modeling and risk rebalancing); (3) <i>Credit Specialist</i> "
-        "(manages asset leverage, mortgages, and business-owner capital loans). A single Pod can comfortably support "
-        "<b>600 high-value clients</b>, compared to only 150 clients previously supported by three separate, uncoordinated RMs.",
+        "(manages asset leverage, mortgages, and business-owner capital loans). A single Pod supports a realistic base of "
+        "<b>150 clients</b>, with an upside stretch target of <b>220 clients</b> as AI-assist tools mature, preventing the "
+        "sum-of-caps error of 600/pod.",
         bullet_style
     ))
     story.append(Paragraph(
