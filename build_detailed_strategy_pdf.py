@@ -199,54 +199,24 @@ def create_strategy_guide_pdf(filename):
     story.append(Paragraph("<b>CONFIDENTIALITY:</b> Internal Council Use Only", metadata_style))
     story.append(PageBreak())
 
-    # ------------------ SECTION 1: DETAILED SPOKEN PITCH SCRIPT ------------------
-    story.append(Paragraph("1. Executive Spoken Pitch Script", h1_style))
-    story.append(Paragraph("<i>This section contains the verbatim, board-level delivery script for the MOVES 2026 judges' presentation.</i>", body_style))
-    story.append(Spacer(1, 5))
-    
-    pitch_paragraphs = [
-        "<b>[Slide 0: Title Slide]</b><br/>"
-        "\"Good morning, members of the Board and the Judging Panel. We are entering the most profound wealth transition "
-        "in India's history. Goldman Sachs projects that India's affluent class will reach 100 million people by 2027. "
-        "Crucially, over 50% of these new wealth creators will emerge from Tier-2, Tier-3, and Tier-4 cities—regional entrepreneurs, "
-        "agri-exporters, and local builders. The challenge before Axis Bank is simple: How do we serve this massive, highly localized "
-        "wealth explosion? If we rely on our legacy model—hiring more relationship managers, putting them on planes to regional hubs, "
-        "and pushing standard investment products—we will hit an operational wall. It is too expensive, it does not scale, "
-        "and it cannot deliver the hyper-personalization next-gen clients demand.\"",
-        
-        "<b>[Slide 1: The Big Bet]</b><br/>"
-        "\"Axis Bank is already a wealth giant. As of Q1 FY27, our total Burgundy wealth franchise stands at ₹7.54 trillion AUM, "
-        "serving over 17,400 families through Burgundy Private. The Citibank integration has supercharged our premium customer base. "
-        "But today's model is still RM-dependent, product-siloed, and reactive. An advisor sits with a client once a quarter, "
-        "manually gathers PDF bank statements from competing institutions, and attempts to cross-sell. Meanwhile, our group "
-        "capabilities—Axis Securities, Axis AMC, Axis Capital, Axis Finance, and Axis Trustee—operate in parallel. "
-        "To win the next decade, we must transition from relationship-led product selling to continuous, data-native household "
-        "wealth orchestration. Our transformational bet is Axis WealthOS 2035: A consent-driven, AI-native household wealth operating system. "
-        "We establish a live 'Wealth Twin' for every Burgundy household. By utilizing India's emerging Account Aggregator framework, "
-        "we legally and continuously ingest external asset registries, liabilities, and business cash flows. The AI engine continuously "
-        "scans the Wealth Twin, spotting tax-harvesting windows, concentration risks, and inheritance events in real time. "
-        "The human RM is not replaced; they are augmented. The AI prepares the book, and the human delivers the trust.\"",
-        
-        "<b>[Slide 2: How It Works & Strategic Impact]</b><br/>"
-        "\"To prove this is an organizational transformation and not just a technology overlay, let us look at how the bank "
-        "operates under WealthOS: First, we are breaking down the siloed generalist RM model. Clients are now covered by collaborative "
-        "Advisory Pods. A Lead Partner owns trust and goal discovery, supported by a Portfolio Architect who models asset risk, and a "
-        "Credit Specialist who designs asset leverage and liquidity lines. Second, WealthOS acts as an automated group router. "
-        "If the AI engine senses an upcoming promoter liquidity event, it automatically coordinates services across Axis Capital for the transaction, "
-        "Axis Finance for bridge credit, and Axis Trustee for family trust creation. Third, under the SPARSH framework, compliance is "
-        "embedded in the workflow. RMs cannot route proposals to clients without passing our automated SEBI suitability filters. "
-        "Attempting to push volatile assets to a conservative client is blocked instantly at the system layer. WealthOS is highly viable. "
-        "We increase RM coverage capacity by 60% and reduce the cost-to-serve by 85%. We project Burgundy AUM to reach ₹16.50 Lakh Crores "
-        "and Burgundy Private AUM to reach ₹7.00 Lakh Crores by 2035. We have structured the implementation into three manageable waves: "
-        "starting with a Phase 1 pilot in our high-value Burgundy Private segment, scaling to Burgundy and Family Banking in Phase 2, "
-        "and achieving full multi-entity group integration by Phase 3. WealthOS turns our group's complexity into our greatest competitive advantage. "
-        "Thank you, and we are now open to your questions.\""
-    ]
-
-    for p_text in pitch_paragraphs:
-        story.append(Paragraph(p_text, body_style))
-        story.append(Spacer(1, 8))
-        
+    # ------------------ SECTION 1: EXECUTIVE BRIEF ------------------
+    story.append(Paragraph("1. Executive Brief: The Opportunity & Challenge", h1_style))
+    story.append(Paragraph(
+        "The Indian wealth management industry is experiencing a historic expansion. Powered by economic growth and "
+        "digital public infrastructure, financial wealth in India is projected to grow from <b>$1.1 Trillion today to $2.3 Trillion by 2030</b>. "
+        "McKinsey's Asia Wealth Report indicates that <b>80% of affluent investors</b> prefer a hybrid advisory model—combining advanced "
+        "digital analytics with deep human relationship management—rather than a pure-play digital platform or a legacy physical RM.",
+        body_style
+    ))
+    story.append(Paragraph(
+        "At the same time, relationship managers (RMs) spend <b>67% of their time on administrative tasks</b> (statement collection, "
+        "manual risk suitability checks, and portfolio reporting) rather than direct client interaction. Axis Bank Burgundy, which holds "
+        "a leading market position with <b>₹6.78 Trillion in total Burgundy AUM and ₹2.40 Trillion in Burgundy Private AUM</b> (serving "
+        "<b>16,453 families</b>), must transform its operating model. To capture the next wave of wealth, particularly in Tier-2 and Tier-3 "
+        "regional hubs, Axis cannot simply hire more RMs. We must build a system that multiplies advisor capability rather than advisor headcount.",
+        body_style
+    ))
+    story.append(Spacer(1, 10))
     story.append(PageBreak())
 
     # ------------------ SECTION 2: DEEP-DIVE FEASIBILITY ------------------
