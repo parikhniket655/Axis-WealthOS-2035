@@ -128,16 +128,21 @@ function switchView(view) {
     // Toggle active classes on nav buttons
     document.getElementById('btn-client-view').classList.toggle('active', view === 'client');
     document.getElementById('btn-rm-view').classList.toggle('active', view === 'rm');
+    document.getElementById('btn-story-view').classList.toggle('active', view === 'story');
     
     // Toggle visible views
     document.getElementById('client-view').classList.toggle('active', view === 'client');
     document.getElementById('rm-view').classList.toggle('active', view === 'rm');
+    document.getElementById('story-view').classList.toggle('active', view === 'story');
 
     // Sync client info to header
     const client = appState.clients[appState.selectedClient];
     if (view === 'rm') {
         document.getElementById('user-display-name').innerText = "Arnika Dixit";
         document.getElementById('user-display-role').innerText = "Lead Wealth Partner";
+    } else if (view === 'story') {
+        document.getElementById('user-display-name').innerText = "Axis Board Council";
+        document.getElementById('user-display-role').innerText = "Future 2035 Transformation Plan";
     } else {
         document.getElementById('user-display-name').innerText = client.name;
         document.getElementById('user-display-role').innerText = client.role;
