@@ -196,6 +196,7 @@ def build_links_pdf(filename):
     story.append(Paragraph("<b>SUBMISSION BY:</b> Team CashCows", metadata_style))
     story.append(Paragraph("<b>COMPETITION:</b> MOVES 2026 — Organization of the Future: Design for 2035", metadata_style))
     story.append(Paragraph("<b>DATE:</b> July 24, 2026", metadata_style))
+    story.append(Paragraph("<b>EXCEL MODEL:</b> Axis_WealthOS_2035_Feasibility_Model.xlsx (Live Formulas)", metadata_style))
     story.append(Paragraph("<b>STATUS:</b> CONFIDENTIAL / BOARD-LEVEL BRIEF", metadata_style))
     story.append(PageBreak())
 
